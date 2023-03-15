@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DropDown | mqasim</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="hero">
+        <div class="selactor">
+            <div id="selectfield">
+                <p id="selectText">Select Social Media</p>
+                <img src="./assets/favicon.png" alt="" id="arrow" />
+            </div>
+            <ul id="list" class="hide">
+                <li class="options">
+                    <img src="./assets/apple-touch-icon.png" alt="" />
+                    <p>Facebook</p>
+                </li>
+                <li class="options">
+                    <img src="./assets/apple-touch-icon.png" alt="" />
+                    <p>Youtube</p>
+                </li>
+                <li class="options">
+                    <img src="./assets/apple-touch-icon.png" alt="" />
+                    <p>Twitter</p>
+                </li>
+                <li class="options">
+                    <img src="./assets/apple-touch-icon.png" alt="" />
+                    <p>WhatsApp</p>
+                </li>
+                <li class="options">
+                    <img src="./assets/apple-touch-icon.png" alt="" />
+                    <p>LinkdIn</p>
+                </li>
+                <li class="options">
+                    <img src="./assets/apple-touch-icon.png" alt="" />
+                    <p>Telegram</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+
+   <script>
+   var selectfield = document.getElementById("selectfield");
+   var selectText = document.getElementById("selectText");
+   var options = document.getElementsByClassName("options");
+   var list = document.getElementById("list")
+   var arrow = document.getElementById("arrow")
+
+   selectfield.onclick = function(){
+    list.classList.toggle("hide");
+    arrow.classList.toggle("rotate");
+
+   }
+  
+   for (option of options){
+    option.onclick = function(){
+        selectText.innerHTML = this.textContent;
+        list.classList.toggle("hide");
+        arrow.classList.toggle("rotate");
+    }
+   }
+   
+   </script>
+
+
+
+</body>
+</html>
